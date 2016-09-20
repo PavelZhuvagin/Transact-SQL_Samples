@@ -292,10 +292,6 @@ BEGIN ' + @Header + '  SET @Type = ''D''
 
     IF @Исключить_из_конфигурации = 0
     BEGIN
-      --DEBUG вывод текстов триггеров
-      --SELECT @UpdateTriggerScript
-      --SELECT @InsertTriggerScript
-      --SELECT @DeleteTriggerScript
       EXEC (@UpdateTriggerScript)
       EXEC (@InsertTriggerScript)
       EXEC (@DeleteTriggerScript)
